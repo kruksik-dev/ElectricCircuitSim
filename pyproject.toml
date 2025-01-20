@@ -1,5 +1,5 @@
 [project]
-name = "electriccircuitsim"
+name = "electric_simulation"
 version = "0.0.1"
 description = "Add your description here"
 readme = "README.md"
@@ -7,10 +7,8 @@ authors = [
     { name = "Maciej Krakowiak", email = "maciej.krakowiak17@gmail.com" }
 ]
 requires-python = ">=3.11"
-dependencies = [
-    "pybind11>=2.13.6",
-]
+dependencies = []
 
 [build-system]
-requires = ["setuptools", "wheel", "pybind11"]
-build-backend = "setuptools.build_meta"
+requires = ["scikit-build-core", "pybind11"]
+build-backend = "scikit_build_core.build"

@@ -1,4 +1,4 @@
-#include "circuit_rl.h"
+#include "../include/circuit_rl.h"
 #include <cmath>
 
 CircuitRL::CircuitRL(double resistance, double inductance, double current)

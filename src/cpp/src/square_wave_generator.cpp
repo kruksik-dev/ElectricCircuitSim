@@ -1,4 +1,4 @@
-#include "square_wave_generator.h"
+#include "../include/square_wave_generator.h"
 #include <cmath>
 
 SquareWaveGenerator::SquareWaveGenerator(double amplitude, double frequency)

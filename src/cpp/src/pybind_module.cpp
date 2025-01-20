@@ -8,7 +8,7 @@
 
 namespace py = pybind11;
 
-PYBIND11_MODULE(electriccircuitsim, m)
+PYBIND11_MODULE(_electric_sim, m)
 {
     py::class_<IGenerator, std::shared_ptr<IGenerator>>(m, "IGenerator")
         .def("calculateVoltage", &IGenerator::calculateVoltage);
