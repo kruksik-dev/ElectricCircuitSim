@@ -1,5 +1,5 @@
 [project]
-name = "electric_simulation"
+name = "circuit_simulator"
 version = "0.0.1"
 description = "Add your description here"
 readme = "README.md"
@@ -7,7 +7,9 @@ authors = [
     { name = "Maciej Krakowiak", email = "maciej.krakowiak17@gmail.com" }
 ]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "matplotlib>=3.10.0",
+]
 
 [build-system]
 requires = ["scikit-build-core", "pybind11"]

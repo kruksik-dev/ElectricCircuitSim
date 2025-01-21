@@ -31,6 +31,6 @@ target_link_libraries(_electric_sim PRIVATE electric)
 target_compile_definitions(_electric_sim PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
 
 
-install(TARGETS _electric_sim DESTINATION electric_simulation/core)
+install(TARGETS _electric_sim DESTINATION circuit_simulator/core)
 
 
