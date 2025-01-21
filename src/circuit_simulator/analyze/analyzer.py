@@ -1,7 +1,10 @@
 from abc import ABC, abstractmethod
 from pathlib import Path
+
 import matplotlib.pyplot as plt
-from circuit_simulator.core import SinusoidalGenerator, SquareWaveGenerator, CircuitRL
+from matplotlib.figure import Figure
+
+from circuit_simulator.core import CircuitRL, SinusoidalGenerator, SquareWaveGenerator
 
 GeneratorType = SquareWaveGenerator | SinusoidalGenerator
 
@@ -65,25 +68,32 @@ class CircuitRLAnalyzer(AbstractAnalyzer):
             result[gen_name] = self._circuit.simulate(generator, end_time, step)
         self._results = result
 
-    def plot_results(self, show: bool = True, save_fig: Path | None = None) -> None:
+    def plot(self, show: bool = True, save_fig: Path | None = None) -> None:
         if not self._results:
             print("No results to plot. Please analyze first.")
             return
-
-        plt.figure(figsize=(10, 6))
-        for gen_name, data in self._results.items():
-            time, voltage, current = zip(*data)
-            plt.plot(time, voltage, label=f'{gen_name} - Voltage', linestyle='-')
-            plt.plot(time, current, label=f'{gen_name} - Current', linestyle='--')
-
-        plt.title("Circuit RL Analysis Results")
-        plt.xlabel("Time (s)")
-        plt.ylabel("Magnitude (V or A)")
-        plt.legend()
-
+        fig = self._create_plot()
         if save_fig:
-            plt.savefig(save_fig)
-            print(f"Plot saved to {save_fig}")
-
+            self._save_figure(fig, save_fig)
         if show:
             plt.show()
+
+    def _create_plot(self) -> Figure:
+        fig, ax = plt.subplots(figsize=(10, 6))
+        for gen_name, data in self._results.items():
+            time, voltage, current = zip(*data)
+            ax.plot(time, voltage, label=f"{gen_name} - Voltage", linestyle="-")
+            ax.plot(time, current, label=f"{gen_name} - Current", linestyle="--")
+
+        ax.set_title("Circuit RL Analysis Results")
+        ax.set_xlabel("Time (s)")
+        ax.set_ylabel("Magnitude (V or A)")
+        ax.legend()
+        return fig
+
+    def _save_figure(self, fig: Figure, save_fig: Path) -> None:
+        save_fig.mkdir(parents=True, exist_ok=True)
+        if save_fig.suffix == "":
+            save_fig = save_fig / "plot.jpg"
+        fig.savefig(save_fig)
+        print(f"Plot saved to {save_fig}")
