@@ -31,6 +31,7 @@ target_link_libraries(_electric_sim PRIVATE electric)
 target_compile_definitions(_electric_sim PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
 
 option(ENABLE_TESTING "Enable testing" OFF)
+if(ENABLE_TESTING)
     message(STATUS "🔹 Testy włączone! Konfiguruję GTest...")
 
     find_package(GTest REQUIRED)
