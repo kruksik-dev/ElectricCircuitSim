@@ -25,6 +25,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install . --no-cache-dir
+        pip install pytest pytest-cov --no-cache-dir
 
     - name: Run tests
       run: |
@@ -60,7 +61,7 @@ jobs:
         mkdir build
         cd build
         cmake -B build -DENABLE_TESTING=ON ..
-        make
+        cmake --build build
 
     - name: Run tests
       run: |
