@@ -76,7 +76,7 @@ jobs:
     needs: [python_tests, c_tests]
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
 
     - name: Set up Python
       uses: actions/setup-python@v4
