@@ -59,7 +59,7 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake ..
+        cmake -B build -DENABLE_TESTING=ON ..
         make
 
     - name: Run tests
