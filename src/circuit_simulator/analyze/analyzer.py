@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from os import path
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -20,7 +21,6 @@ class AbstractAnalyzer(ABC):
 
 
 class CircuitRLAnalyzer(AbstractAnalyzer):
-
     def __init__(
         self,
         generators: dict[str, GeneratorType] | None = None,
@@ -32,6 +32,23 @@ class CircuitRLAnalyzer(AbstractAnalyzer):
         self._circuit: CircuitRL | None = circuit
         self._results: dict[str, list[tuple[float, float, float]]] = {}
 
+    @property
+    def generators(self) -> dict[str, GeneratorType]:
+        return self._generators
+
+    @property
+    def results(self) -> dict[str, list[tuple[float, float, float]]]:
+        return self._results
+
+    @property
+    def circuit(self) -> CircuitRL | None:
+        return self._circuit
+
+    @circuit.setter
+    def circuit(self, value: CircuitRL) -> None:
+        self._circuit = value
+        print("Circuit set")
+
     def add_generator(self, name: str, generator: GeneratorType) -> None:
         self._generators[name] = generator
         print(f"Generator {name} added")
@@ -41,10 +58,6 @@ class CircuitRLAnalyzer(AbstractAnalyzer):
             raise ValueError(f"Generator {name} not found")
         del self._generators[name]
         print(f"Generator {name} removed")
-
-    def set_circuit(self, circuit: CircuitRL) -> None:
-        self._circuit = circuit
-        print("Circuit set")
 
     def analyze(
         self, end_time: float, step: float, name: str | list[str] | None = None
@@ -68,7 +81,7 @@ class CircuitRLAnalyzer(AbstractAnalyzer):
             result[gen_name] = self._circuit.simulate(generator, end_time, step)
         self._results = result
 
-    def plot(self, show: bool = True, save_fig: Path | None = None) -> None:
+    def plot_results(self, show: bool = True, save_fig: Path | None = None) -> None:
         if not self._results:
             print("No results to plot. Please analyze first.")
             return
@@ -92,8 +105,9 @@ class CircuitRLAnalyzer(AbstractAnalyzer):
         return fig
 
     def _save_figure(self, fig: Figure, save_fig: Path) -> None:
-        save_fig.mkdir(parents=True, exist_ok=True)
+        if not path.exists(save_fig.parent):
+            save_fig.mkdir(parents=True, exist_ok=True)
         if save_fig.suffix == "":
-            save_fig = save_fig / "plot.jpg"
+            save_fig = save_fig / "plot.png"
         fig.savefig(save_fig)
         print(f"Plot saved to {save_fig}")

@@ -10,6 +10,7 @@ set(PYBIND11_FINDPYTHON ON)
 # Znalezienie Pythona i pybind11
 find_package(Python REQUIRED COMPONENTS Interpreter Development.Module)
 find_package(pybind11 CONFIG REQUIRED)
+find_package(GTest REQUIRED)
 
 # Pliki źródłowe
 set(SOURCES 
@@ -33,4 +34,13 @@ target_compile_definitions(_electric_sim PRIVATE VERSION_INFO=${EXAMPLE_VERSION_
 
 install(TARGETS _electric_sim DESTINATION circuit_simulator/core)
 
+enable_testing()
+
+set(TEST_SOURCES tests/test_electric_sim.cpp)
+
+add_executable(test_electric_sim ${TEST_SOURCES})
+target_link_libraries(test_electric_sim PRIVATE electric GTest::gtest_main)
+
+include(GoogleTest)
+gtest_discover_tests(test_electric_sim)
 
