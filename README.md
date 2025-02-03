@@ -24,22 +24,24 @@ V(t) = A \sin(2 \pi f t + \phi)
 $$
 
 Where:
-- $ A $ is the **amplitude**
-- $ f $ is the **frequency**
-- $ \phi $ is the **phase**
-- $ t $ is **time**
+- $A$ is the **amplitude**
+- $f$ is the **frequency**
+- $\phi$ is the **phase**
+- $t$ is **time**
 
 ### Square Wave Generator
 
-The voltage $ V(t) $ produced by a square wave generator is:
+The voltage $V(t)$ produced by a square wave generator is:
 
-$$V(t) = \begin{cases} A & \text{if } \mod(t, T) < \frac{T}{2} \\ -A & \text{otherwise} \end{cases}$$
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.latex?\bg_white\color{white}\bf{V(t)%20=%20\begin{cases}%20A%20&%20\text{if%20}\mod(t,%20T)%20<%20\frac{T}{2}%20\\%20-A%20&%20\text{otherwise}%20\end{cases}}" />
+</p>
 
 Where:
-- $ A $ is the **amplitude**
-- $ T $ is the **period** (with $ T = \frac{1}{f} $)
-- $ f $ is the **frequency**
-- $ t $ is **time**
+- $A$ is the **amplitude**
+- $T$ is the **period** (with $ T = \frac{1}{f} $)
+- $f$ is the **frequency**
+- $t$ is **time**
 
 ### RL Circuit Simulation
 
@@ -50,10 +52,10 @@ V(t) = L \frac{dI(t)}{dt} + R I(t)
 $$
 
 Where:
-- $ V(t) $ is the **voltage** from the generator
-- $ I(t) $ is the **current** flowing through the circuit
-- $ L $ is the **inductance**
-- $ R $ is the **resistance**
+- $V(t)$ is the **voltage** from the generator
+- $I(t)$ is the **current** flowing through the circuit
+- $L$ is the **inductance**
+- $R$ is the **resistance**
 
 This equation is solved iteratively using the **Euler method** for simulation.
 
