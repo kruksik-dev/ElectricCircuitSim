@@ -33,13 +33,9 @@ Where:
 
 The voltage $V(t)$ produced by a square wave generator is:
 
-$$
-V(t) =
-\begin{cases} 
-A, & \text{if } \mod(t, T) < \frac{T}{2} \\ 
-- A, & \text{otherwise} 
-\end{cases}
-$$
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.latex?\bg_white\color{white}\bf{V(t)%20=%20\begin{cases}%20A%20&%20\text{if%20}\mod(t,%20T)%20<%20\frac{T}{2}%20\\%20-A%20&%20\text{otherwise}%20\end{cases}}" />
+</p>
 
 Where:
 - $A$ is the **amplitude**
