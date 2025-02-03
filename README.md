@@ -34,7 +34,11 @@ Where:
 The voltage $V(t)$ produced by a square wave generator is:
 
 $$
-V(t) = \begin{cases} A & \text{if } \mod(t, T) < \frac{T}{2} \\ -A & \text{otherwise} \end{cases}
+V(t) =
+\begin{cases} 
+A, & \text{if } \mod(t, T) < \frac{T}{2} \\ 
+- A, & \text{otherwise} 
+\end{cases}
 $$
 
 Where:
