@@ -29,8 +29,23 @@ target_link_libraries(_electric_sim PRIVATE electric)
 
 # Opcjonalnie: Definicje kompilacji, jeśli potrzebne
 target_compile_definitions(_electric_sim PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})
-
-
 install(TARGETS _electric_sim DESTINATION circuit_simulator/core)
 
+option(ENABLE_TESTING "Enable testing" OFF)
+if(ENABLE_TESTING)
+    message(STATUS "🔹 Tests on, GTest is setting up ...")
 
+    find_package(GTest REQUIRED)
+
+    enable_testing()
+
+    set(TEST_SOURCES tests/test_electric_sim.cpp)
+
+    add_executable(test_electric_sim ${TEST_SOURCES})
+    target_link_libraries(test_electric_sim PRIVATE electric GTest::gtest_main)
+
+    include(GoogleTest)
+    gtest_discover_tests(test_electric_sim)
+else()
+    message(STATUS "⚠️ Tests off - skip GTest.")
+endif()
