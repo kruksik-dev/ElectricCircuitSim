@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classSinusoidalGenerator" kind="class" language="C++" prot="public">
+    <compoundname>SinusoidalGenerator</compoundname>
+    <basecompoundref refid="classIGenerator" prot="public" virt="non-virtual">IGenerator</basecompoundref>
+    <includes refid="sinusoidal__generator_8h" local="no">sinusoidal_generator.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSinusoidalGenerator_1a9ddb2692fdef19214f89dc46d90c3cc8" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SinusoidalGenerator::amplitude</definition>
+        <argsstring></argsstring>
+        <name>amplitude</name>
+        <briefdescription>
+<para>Amplitude of the sinusoidal wave. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/sinusoidal_generator.h" line="16" column="12" bodyfile="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/sinusoidal_generator.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSinusoidalGenerator_1a8e1733274a54623757fcfdb1adb0269b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SinusoidalGenerator::frequency</definition>
+        <argsstring></argsstring>
+        <name>frequency</name>
+        <briefdescription>
+<para>Frequency of the sinusoidal wave in Hz. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/sinusoidal_generator.h" line="17" column="12" bodyfile="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/sinusoidal_generator.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSinusoidalGenerator_1ae1e37bec42cae5ab46b0b01a9d94807d" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SinusoidalGenerator::phase</definition>
+        <argsstring></argsstring>
+        <name>phase</name>
+        <briefdescription>
+<para>Phase shift of the sinusoidal wave in radians. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/sinusoidal_generator.h" line="18" column="12" bodyfile="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/sinusoidal_generator.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSinusoidalGenerator_1aedfdcb376368493e66cc32472f97a8db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SinusoidalGenerator::SinusoidalGenerator</definition>
+        <argsstring>(double amplitude, double frequency, double phase=0.0)</argsstring>
+        <name>SinusoidalGenerator</name>
+        <param>
+          <type>double</type>
+          <declname>amplitude</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>frequency</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>phase</declname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="classSinusoidalGenerator" kindref="compound">SinusoidalGenerator</ref> with given amplitude, frequency, and phase. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amplitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The peak amplitude of the sinusoidal wave. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The frequency of the sinusoidal wave in Hz. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>phase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The phase shift of the sinusoidal wave in radians (default is 0.0). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/sinusoidal_generator.h" line="27" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classSinusoidalGenerator_1a312df7b18efe521e0edb902fd79e5a1a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double SinusoidalGenerator::calculateVoltage</definition>
+        <argsstring>(double time) const override</argsstring>
+        <name>calculateVoltage</name>
+        <reimplements refid="classIGenerator_1a6e21c100370c01bcd97a277b49c7aa21">calculateVoltage</reimplements>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the voltage at a given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function returns the voltage value of the sinusoidal wave at a specific time. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time (in seconds) at which to evaluate the wave. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The voltage value at the given time. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/sinusoidal_generator.h" line="36" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classSinusoidalGenerator_1a24a713f3af064b207376e3e951b39af6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SinusoidalGenerator::~SinusoidalGenerator</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~SinusoidalGenerator</name>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/sinusoidal_generator.h" line="41" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class representing a sinusoidal wave signal generator. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements the <computeroutput><ref refid="classIGenerator" kindref="compound">IGenerator</ref></computeroutput> interface and generates a sinusoidal wave signal with a specified amplitude, frequency, and phase. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SinusoidalGenerator</label>
+        <link refid="classSinusoidalGenerator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IGenerator</label>
+        <link refid="classIGenerator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SinusoidalGenerator</label>
+        <link refid="classSinusoidalGenerator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IGenerator</label>
+        <link refid="classIGenerator"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/sinusoidal_generator.h" line="13" column="1" bodyfile="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/sinusoidal_generator.h" bodystart="14" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classSinusoidalGenerator_1a9ddb2692fdef19214f89dc46d90c3cc8" prot="private" virt="non-virtual"><scope>SinusoidalGenerator</scope><name>amplitude</name></member>
+      <member refid="classSinusoidalGenerator_1a312df7b18efe521e0edb902fd79e5a1a" prot="public" virt="virtual"><scope>SinusoidalGenerator</scope><name>calculateVoltage</name></member>
+      <member refid="classSinusoidalGenerator_1a8e1733274a54623757fcfdb1adb0269b" prot="private" virt="non-virtual"><scope>SinusoidalGenerator</scope><name>frequency</name></member>
+      <member refid="classSinusoidalGenerator_1ae1e37bec42cae5ab46b0b01a9d94807d" prot="private" virt="non-virtual"><scope>SinusoidalGenerator</scope><name>phase</name></member>
+      <member refid="classSinusoidalGenerator_1aedfdcb376368493e66cc32472f97a8db" prot="public" virt="non-virtual"><scope>SinusoidalGenerator</scope><name>SinusoidalGenerator</name></member>
+      <member refid="classIGenerator_1ad21deed1fd4722b2869265238a5fecdf" prot="public" virt="virtual"><scope>SinusoidalGenerator</scope><name>~IGenerator</name></member>
+      <member refid="classSinusoidalGenerator_1a24a713f3af064b207376e3e951b39af6" prot="public" virt="non-virtual"><scope>SinusoidalGenerator</scope><name>~SinusoidalGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

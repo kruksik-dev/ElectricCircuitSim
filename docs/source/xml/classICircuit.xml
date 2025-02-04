@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classICircuit" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ICircuit</compoundname>
+    <derivedcompoundref refid="classCircuitRL" prot="public" virt="non-virtual">CircuitRL</derivedcompoundref>
+    <includes refid="circuit_8h" local="no">circuit.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classICircuit_1ab46b4b021235f5f456145e84dfbfa1aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::vector&lt; std::tuple&lt; double, double, double &gt; &gt;</type>
+        <definition>virtual std::vector&lt;std::tuple&lt;double, double, double&gt; &gt; ICircuit::simulate</definition>
+        <argsstring>(const IGenerator &amp;generator, double t_end, double dt)=0</argsstring>
+        <name>simulate</name>
+        <reimplementedby refid="classCircuitRL_1ad9ab7b178baa7f542722eae7f2162d93">simulate</reimplementedby>
+        <param>
+          <type>const <ref refid="classIGenerator" kindref="compound">IGenerator</ref> &amp;</type>
+          <declname>generator</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t_end</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Simulates the circuit&apos;s behavior over time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This pure virtual function must be implemented by derived classes to simulate the circuit&apos;s response to a given signal generator over a specified period. The result is a series of time-voltage-current triplets.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>generator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The signal generator used to provide input to the circuit. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t_end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The final time (in seconds) for the simulation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time step (in seconds) used for the simulation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of tuples, each containing a time, voltage, and current. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/circuit.h" line="31" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classICircuit_1a4de3cde9e59ba42c295f2547d3b711fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual ICircuit::~ICircuit</definition>
+        <argsstring>()=default</argsstring>
+        <name>~ICircuit</name>
+        <briefdescription>
+<para>Default virtual destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The destructor is marked virtual to ensure proper cleanup of derived classes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/circuit.h" line="39" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An interface for simulating electrical circuits. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This interface defines the common behavior for all circuit simulation classes. Any class implementing this interface must provide the <computeroutput>simulate</computeroutput> method to simulate the circuit&apos;s behavior with a given signal generator. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ICircuit</label>
+        <link refid="classICircuit"/>
+      </node>
+      <node id="2">
+        <label>CircuitRL</label>
+        <link refid="classCircuitRL"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/circuit.h" line="16" column="1" bodyfile="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/circuit.h" bodystart="17" bodyend="40"/>
+    <listofallmembers>
+      <member refid="classICircuit_1ab46b4b021235f5f456145e84dfbfa1aa" prot="public" virt="pure-virtual"><scope>ICircuit</scope><name>simulate</name></member>
+      <member refid="classICircuit_1a4de3cde9e59ba42c295f2547d3b711fa" prot="public" virt="virtual"><scope>ICircuit</scope><name>~ICircuit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

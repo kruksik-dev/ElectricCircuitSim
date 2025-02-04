@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_d7cdddb7a4322ae7e54b11927b5877ad" kind="dir">
+    <compoundname>/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/src</compoundname>
+    <innerfile refid="circuit__rl_8cpp">circuit_rl.cpp</innerfile>
+    <innerfile refid="sinusoidal__generator_8cpp">sinusoidal_generator.cpp</innerfile>
+    <innerfile refid="square__wave__generator_8cpp">square_wave_generator.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/src/"/>
+  </compounddef>
+</doxygen>

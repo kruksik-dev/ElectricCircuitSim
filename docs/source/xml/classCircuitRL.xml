@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classCircuitRL" kind="class" language="C++" prot="public">
+    <compoundname>CircuitRL</compoundname>
+    <basecompoundref refid="classICircuit" prot="public" virt="non-virtual">ICircuit</basecompoundref>
+    <includes refid="circuit__rl_8h" local="no">circuit_rl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCircuitRL_1a7ed6ec1a10d7cf89035f3f754afc894b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CircuitRL::resistance</definition>
+        <argsstring></argsstring>
+        <name>resistance</name>
+        <briefdescription>
+<para>The resistance of the resistor in the RL circuit (in ohms). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/circuit_rl.h" line="17" column="12" bodyfile="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/circuit_rl.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCircuitRL_1a81f0d5a7e7d146fa1713506d17ff5aae" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CircuitRL::inductance</definition>
+        <argsstring></argsstring>
+        <name>inductance</name>
+        <briefdescription>
+<para>The inductance of the inductor in the RL circuit (in henrys). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/circuit_rl.h" line="18" column="12" bodyfile="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/circuit_rl.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classCircuitRL_1a2fabb72570cd8975825756ac470b7c16" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double CircuitRL::current</definition>
+        <argsstring></argsstring>
+        <name>current</name>
+        <briefdescription>
+<para>The initial current in the RL circuit (in amperes). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/circuit_rl.h" line="19" column="12" bodyfile="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/circuit_rl.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCircuitRL_1a9157da1ac4793726728dbbf57cc49af3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CircuitRL::CircuitRL</definition>
+        <argsstring>(double resistance, double inductance, double current=0.0)</argsstring>
+        <name>CircuitRL</name>
+        <param>
+          <type>double</type>
+          <declname>resistance</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>inductance</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>current</declname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="classCircuitRL" kindref="compound">CircuitRL</ref> object with the given resistance, inductance, and initial current. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>resistance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The resistance value of the resistor in ohms. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inductance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The inductance value of the inductor in henrys. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>current</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The initial current in the circuit (default is 0.0). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/circuit_rl.h" line="28" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classCircuitRL_1ad9ab7b178baa7f542722eae7f2162d93" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; std::tuple&lt; double, double, double &gt; &gt;</type>
+        <definition>std::vector&lt;std::tuple&lt;double, double, double&gt; &gt; CircuitRL::simulate</definition>
+        <argsstring>(const IGenerator &amp;generator, double t_end, double dt) override</argsstring>
+        <name>simulate</name>
+        <reimplements refid="classICircuit_1ab46b4b021235f5f456145e84dfbfa1aa">simulate</reimplements>
+        <param>
+          <type>const <ref refid="classIGenerator" kindref="compound">IGenerator</ref> &amp;</type>
+          <declname>generator</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t_end</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Simulates the behavior of the RL circuit over time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function simulates the current, voltage, and time values of the RL circuit under the influence of a specified signal generator. The simulation is run over the time interval [0, t_end] with the given time step <computeroutput>dt</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>generator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The signal generator used to provide input to the circuit. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t_end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The final time (in seconds) for the simulation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time step (in seconds) used for the simulation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A vector of tuples, each containing time, voltage, and current values for the circuit. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/circuit_rl.h" line="42" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classCircuitRL_1ae0e1fbcfc9708e11944bf8906c71b90e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CircuitRL::~CircuitRL</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~CircuitRL</name>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The destructor is marked virtual to ensure proper cleanup of derived classes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/circuit_rl.h" line="50" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class representing an RL (resistor-inductor) circuit. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements the <computeroutput><ref refid="classICircuit" kindref="compound">ICircuit</ref></computeroutput> interface and simulates the behavior of an RL circuit, which consists of a resistor and an inductor, under the influence of an input signal generator. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ICircuit</label>
+        <link refid="classICircuit"/>
+      </node>
+      <node id="1">
+        <label>CircuitRL</label>
+        <link refid="classCircuitRL"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ICircuit</label>
+        <link refid="classICircuit"/>
+      </node>
+      <node id="1">
+        <label>CircuitRL</label>
+        <link refid="classCircuitRL"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/circuit_rl.h" line="14" column="1" bodyfile="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/circuit_rl.h" bodystart="15" bodyend="51"/>
+    <listofallmembers>
+      <member refid="classCircuitRL_1a9157da1ac4793726728dbbf57cc49af3" prot="public" virt="non-virtual"><scope>CircuitRL</scope><name>CircuitRL</name></member>
+      <member refid="classCircuitRL_1a2fabb72570cd8975825756ac470b7c16" prot="private" virt="non-virtual"><scope>CircuitRL</scope><name>current</name></member>
+      <member refid="classCircuitRL_1a81f0d5a7e7d146fa1713506d17ff5aae" prot="private" virt="non-virtual"><scope>CircuitRL</scope><name>inductance</name></member>
+      <member refid="classCircuitRL_1a7ed6ec1a10d7cf89035f3f754afc894b" prot="private" virt="non-virtual"><scope>CircuitRL</scope><name>resistance</name></member>
+      <member refid="classCircuitRL_1ad9ab7b178baa7f542722eae7f2162d93" prot="public" virt="virtual"><scope>CircuitRL</scope><name>simulate</name></member>
+      <member refid="classCircuitRL_1ae0e1fbcfc9708e11944bf8906c71b90e" prot="public" virt="non-virtual"><scope>CircuitRL</scope><name>~CircuitRL</name></member>
+      <member refid="classICircuit_1a4de3cde9e59ba42c295f2547d3b711fa" prot="public" virt="virtual"><scope>CircuitRL</scope><name>~ICircuit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

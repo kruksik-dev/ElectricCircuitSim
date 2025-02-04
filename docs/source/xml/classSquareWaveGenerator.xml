@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classSquareWaveGenerator" kind="class" language="C++" prot="public">
+    <compoundname>SquareWaveGenerator</compoundname>
+    <basecompoundref refid="classIGenerator" prot="public" virt="non-virtual">IGenerator</basecompoundref>
+    <includes refid="square__wave__generator_8h" local="no">square_wave_generator.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSquareWaveGenerator_1aa841edd205ef0b7a35233a1823b12c08" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SquareWaveGenerator::amplitude</definition>
+        <argsstring></argsstring>
+        <name>amplitude</name>
+        <briefdescription>
+<para>Amplitude of the square wave. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/square_wave_generator.h" line="16" column="12" bodyfile="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/square_wave_generator.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSquareWaveGenerator_1a9f824da5225a79c42d77e5f961f13750" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double SquareWaveGenerator::frequency</definition>
+        <argsstring></argsstring>
+        <name>frequency</name>
+        <briefdescription>
+<para>Frequency of the square wave. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/square_wave_generator.h" line="17" column="12" bodyfile="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/square_wave_generator.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSquareWaveGenerator_1a1774eec0228b65d46a95f4c9d00abaef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SquareWaveGenerator::SquareWaveGenerator</definition>
+        <argsstring>(double amplitude, double frequency)</argsstring>
+        <name>SquareWaveGenerator</name>
+        <param>
+          <type>double</type>
+          <declname>amplitude</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>frequency</declname>
+        </param>
+        <briefdescription>
+<para>Constructs a <ref refid="classSquareWaveGenerator" kindref="compound">SquareWaveGenerator</ref> with given amplitude and frequency. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amplitude</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The peak amplitude of the square wave. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>frequency</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The frequency of the square wave in Hz. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/square_wave_generator.h" line="25" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classSquareWaveGenerator_1afbb3f3478d1082a945ca02bd201823b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double SquareWaveGenerator::calculateVoltage</definition>
+        <argsstring>(double time) const override</argsstring>
+        <name>calculateVoltage</name>
+        <reimplements refid="classIGenerator_1a6e21c100370c01bcd97a277b49c7aa21">calculateVoltage</reimplements>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the voltage at a given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function returns the voltage value of the square wave at a specific time. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time (in seconds) at which to evaluate the wave. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The voltage value at the given time. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/square_wave_generator.h" line="34" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classSquareWaveGenerator_1a9c3658b7ecde10e43411e121e7d26e1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SquareWaveGenerator::~SquareWaveGenerator</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~SquareWaveGenerator</name>
+        <briefdescription>
+<para>Default destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/square_wave_generator.h" line="39" column="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class representing a square wave signal generator. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class implements the <computeroutput><ref refid="classIGenerator" kindref="compound">IGenerator</ref></computeroutput> interface and generates a square wave signal with a specified amplitude and frequency. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>SquareWaveGenerator</label>
+        <link refid="classSquareWaveGenerator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IGenerator</label>
+        <link refid="classIGenerator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>SquareWaveGenerator</label>
+        <link refid="classSquareWaveGenerator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>IGenerator</label>
+        <link refid="classIGenerator"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/square_wave_generator.h" line="13" column="1" bodyfile="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/square_wave_generator.h" bodystart="14" bodyend="40"/>
+    <listofallmembers>
+      <member refid="classSquareWaveGenerator_1aa841edd205ef0b7a35233a1823b12c08" prot="private" virt="non-virtual"><scope>SquareWaveGenerator</scope><name>amplitude</name></member>
+      <member refid="classSquareWaveGenerator_1afbb3f3478d1082a945ca02bd201823b2" prot="public" virt="virtual"><scope>SquareWaveGenerator</scope><name>calculateVoltage</name></member>
+      <member refid="classSquareWaveGenerator_1a9f824da5225a79c42d77e5f961f13750" prot="private" virt="non-virtual"><scope>SquareWaveGenerator</scope><name>frequency</name></member>
+      <member refid="classSquareWaveGenerator_1a1774eec0228b65d46a95f4c9d00abaef" prot="public" virt="non-virtual"><scope>SquareWaveGenerator</scope><name>SquareWaveGenerator</name></member>
+      <member refid="classIGenerator_1ad21deed1fd4722b2869265238a5fecdf" prot="public" virt="virtual"><scope>SquareWaveGenerator</scope><name>~IGenerator</name></member>
+      <member refid="classSquareWaveGenerator_1a9c3658b7ecde10e43411e121e7d26e1d" prot="public" virt="non-virtual"><scope>SquareWaveGenerator</scope><name>~SquareWaveGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

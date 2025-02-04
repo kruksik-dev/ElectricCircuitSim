@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="generator_8h" kind="file" language="C++">
+    <compoundname>generator.h</compoundname>
+    <includedby refid="circuit_8h" local="yes">circuit.h</includedby>
+    <includedby refid="sinusoidal__generator_8h" local="yes">sinusoidal_generator.h</includedby>
+    <includedby refid="square__wave__generator_8h" local="yes">square_wave_generator.h</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>circuit.h</label>
+        <link refid="circuit_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>sinusoidal_generator.h</label>
+        <link refid="sinusoidal__generator_8h"/>
+      </node>
+      <node id="3">
+        <label>circuit_rl.h</label>
+        <link refid="circuit__rl_8h"/>
+      </node>
+      <node id="5">
+        <label>square_wave_generator.h</label>
+        <link refid="square__wave__generator_8h"/>
+      </node>
+      <node id="1">
+        <label>generator.h</label>
+        <link refid="generator_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classIGenerator" prot="public">IGenerator</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>GENERATOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GENERATOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="classIGenerator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classIGenerator" kindref="compound">IGenerator</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22" refid="classIGenerator_1a6e21c100370c01bcd97a277b49c7aa21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classIGenerator_1a6e21c100370c01bcd97a277b49c7aa21" kindref="member">calculateVoltage</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>time)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classIGenerator_1ad21deed1fd4722b2869265238a5fecdf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classIGenerator_1ad21deed1fd4722b2869265238a5fecdf" kindref="member">~IGenerator</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>GENERATOR_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/generator.h"/>
+  </compounddef>
+</doxygen>
