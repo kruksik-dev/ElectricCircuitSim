@@ -1,4 +1,3 @@
-
 # Electric Circuit Simulator
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
@@ -75,7 +74,7 @@ This equation is solved iteratively using the **Euler method** for simulation.
 Install the package directly from PyPI:
 
 ```bash
-pip install XXXXXX
+pip install ElectricCircuitSim
 ```
 
 ### From Source
@@ -92,6 +91,12 @@ pip install .
 
 ---
 
+## 📜 Documentation
+
+For detailed documentation, visit our [Read the Docs page](https://electriccircuitsim.readthedocs.io).
+
+---
+
 ## 🧑‍💻 Usage Example
 
 Here’s how you can use the Electric Circuit Simulator to analyze an RL circuit with different generators.
@@ -99,7 +104,7 @@ Here’s how you can use the Electric Circuit Simulator to analyze an RL circuit
 #Example 1
 ```python
 
-from circuit_simulator.core import CircuitRL, SquareWaveGenerator
+from ElectricCircuitSim.core import CircuitRL, SquareWaveGenerator
 
 # Create generator
 square_gen = SquareWaveGenerator(frequency=0.5, amplitude=0.5)
@@ -118,8 +123,8 @@ print(result) # [(0.0, 0.5, 0.010000000000000002), (0.1, 0.5, 0.0198000000000000
 ```python
 
 
-from circuit_simulator.analyze import CircuitRLAnalyzer
-from circuit_simulator.core import CircuitRL, SinusoidalGenerator, SquareWaveGenerator
+from ElectricCircuitSim.analyze import CircuitRLAnalyzer
+from ElectricCircuitSim.core import CircuitRL, SinusoidalGenerator, SquareWaveGenerator
 
 # Create generators
 sin_gen = SinusoidalGenerator(frequency=0.25, amplitude=0.5)

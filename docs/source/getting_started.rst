@@ -13,7 +13,7 @@ To install the Circuit Simulator using pip, run the following command:
 
 .. code-block:: bash
 
-    pip install electric-circuit-simulator
+    pip install ElectricCircuitSim
 
 
 Installing from GitHub
@@ -22,5 +22,5 @@ To install the Circuit Simulator by downloading the code from GitHub:
 
 .. code-block:: bash
     
-    git clone https://github.com/yourusername/ElectricCircuitSim.git
+    git clone https://github.com/kruksik-dev/ElectricCircuitSim
 

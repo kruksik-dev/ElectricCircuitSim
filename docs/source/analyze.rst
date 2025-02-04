@@ -1,7 +1,7 @@
 Analyze Module
 ==============
 
-.. automodule:: circuit_simulator.analyze
+.. automodule:: ElectricCircuitSim.analyze
    :members:
    :undoc-members:
    :show-inheritance:

@@ -18,12 +18,12 @@ API Reference
    analyze
    core
 
-.. automodule:: circuit_simulator.analyze.analyzer
+.. automodule:: ElectricCircuitSim.analyze.analyzer
    :members:
    :undoc-members:
    :show-inheritance:
 
-.. automodule:: circuit_simulator.core
+.. automodule:: ElectricCircuitSim.core
    :members:
    :undoc-members:
    :show-inheritance:

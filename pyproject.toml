@@ -1,7 +1,7 @@
 [project]
-name = "circuit_simulator"
-version = "0.0.1"
-description = "Add your description here"
+name = "ElectricCircuitSim"
+version = "0.0.2"
+description = "A powerful Python package for simulating electrical circuits and generators."
 readme = "README.md"
 authors = [
     { name = "Maciej Krakowiak", email = "maciej.krakowiak17@gmail.com" }
@@ -11,6 +11,17 @@ dependencies = [
     "matplotlib>=3.10.0",
 ]
 license = { text = "MIT" }
+keywords = ["simulation", "electrical circuits", "generators", "RL circuit", "sinusoidal", "square wave"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
 
 [build-system]
 requires = ["scikit-build-core", "pybind11"]

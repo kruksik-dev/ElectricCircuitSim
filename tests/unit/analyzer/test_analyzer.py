@@ -2,8 +2,8 @@ from pathlib import Path
 import tempfile
 from unittest.mock import MagicMock
 import pytest
-from circuit_simulator.analyze.analyzer import CircuitRLAnalyzer
-from circuit_simulator.core import CircuitRL, SinusoidalGenerator, SquareWaveGenerator
+from ElectricCircuitSim.analyze.analyzer import CircuitRLAnalyzer
+from ElectricCircuitSim.core import CircuitRL, SinusoidalGenerator, SquareWaveGenerator
 
 
 @pytest.fixture

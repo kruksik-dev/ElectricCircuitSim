@@ -1,6 +1,6 @@
 import pytest
 
-from circuit_simulator.core import CircuitRL, SinusoidalGenerator, SquareWaveGenerator
+from ElectricCircuitSim.core import CircuitRL, SinusoidalGenerator, SquareWaveGenerator
 
 
 @pytest.mark.parametrize(

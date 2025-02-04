@@ -7,7 +7,7 @@ This section demonstrates how to create different types of generators and call t
 
 .. code-block:: python
 
-    from circuit_simulator.core import SinusoidalGenerator, SquareWaveGenerator
+    from ElectricCircuitSim.core import SinusoidalGenerator, SquareWaveGenerator
 
     # Create a sinusoidal generator
     sinusoidal_gen = SinusoidalGenerator(frequency=50, amplitude=10)
@@ -25,7 +25,7 @@ This example demonstrates a simple RL circuit with a sinusoidal generator.
 
 .. code-block:: python
 
-    from circuit_simulator.core import CircuitRL, SinusoidalGenerator
+    from ElectricCircuitSim.core import CircuitRL, SinusoidalGenerator
 
     # Create a sinusoidal generator
     generator_sin = SinusoidalGenerator(frequency=50, amplitude=10)
@@ -56,8 +56,8 @@ This section demonstrates how to use the `CircuitRLAnalyzer` to analyze and plot
 
 .. code-block:: python
 
-    from circuit_simulator.analyze import CircuitRLAnalyzer
-    from circuit_simulator.core import CircuitRL, SinusoidalGenerator, SquareWaveGenerator
+    from ElectricCircuitSim.analyze import CircuitRLAnalyzer
+    from ElectricCircuitSim.core import CircuitRL, SinusoidalGenerator, SquareWaveGenerator
     from pathlib import Path
 
     # Create generators

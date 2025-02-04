@@ -1,7 +1,7 @@
 from abc import ABC
 from pathlib import Path
 
-from circuit_simulator.core import CircuitRL, SinusoidalGenerator, SquareWaveGenerator
+from ElectricCircuitSim.core import CircuitRL, SinusoidalGenerator, SquareWaveGenerator
 
 GeneratorType = SquareWaveGenerator | SinusoidalGenerator
 

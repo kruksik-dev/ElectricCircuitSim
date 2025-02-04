@@ -5,7 +5,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 from matplotlib.figure import Figure
 
-from circuit_simulator.core import CircuitRL, SinusoidalGenerator, SquareWaveGenerator
+from ElectricCircuitSim.core import CircuitRL, SinusoidalGenerator, SquareWaveGenerator
 
 GeneratorType = SquareWaveGenerator | SinusoidalGenerator
 
