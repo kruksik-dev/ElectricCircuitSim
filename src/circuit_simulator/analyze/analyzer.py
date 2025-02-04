@@ -180,6 +180,5 @@ class CircuitRLAnalyzer(AbstractAnalyzer):
             save_fig.mkdir(parents=True, exist_ok=True)
         if save_fig.suffix == "":
             save_fig = save_fig / "plot.png"
-            save_fig = save_fig / "plot.png"
         fig.savefig(save_fig)
         print(f"Plot saved to {save_fig}")
