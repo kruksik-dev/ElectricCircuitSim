@@ -33,7 +33,7 @@ install(TARGETS _electric_sim DESTINATION circuit_simulator/core)
 
 option(ENABLE_TESTING "Enable testing" OFF)
 if(ENABLE_TESTING)
-    message(STATUS "🔹 Testy włączone! Konfiguruję GTest...")
+    message(STATUS "🔹 Tests on, GTest is setting up ...")
 
     find_package(GTest REQUIRED)
 
@@ -47,5 +47,5 @@ if(ENABLE_TESTING)
     include(GoogleTest)
     gtest_discover_tests(test_electric_sim)
 else()
-    message(STATUS "⚠️ Testy wyłączone - pomijam konfigurację GTest.")
+    message(STATUS "⚠️ Tests off - skip GTest.")
 endif()
