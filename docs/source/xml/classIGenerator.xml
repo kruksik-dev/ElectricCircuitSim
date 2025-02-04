@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classIGenerator" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>IGenerator</compoundname>
+    <derivedcompoundref refid="classSinusoidalGenerator" prot="public" virt="non-virtual">SinusoidalGenerator</derivedcompoundref>
+    <derivedcompoundref refid="classSquareWaveGenerator" prot="public" virt="non-virtual">SquareWaveGenerator</derivedcompoundref>
+    <includes refid="generator_8h" local="no">generator.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classIGenerator_1a6e21c100370c01bcd97a277b49c7aa21" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double IGenerator::calculateVoltage</definition>
+        <argsstring>(double time) const =0</argsstring>
+        <name>calculateVoltage</name>
+        <reimplementedby refid="classSinusoidalGenerator_1a312df7b18efe521e0edb902fd79e5a1a">calculateVoltage</reimplementedby>
+        <reimplementedby refid="classSquareWaveGenerator_1afbb3f3478d1082a945ca02bd201823b2">calculateVoltage</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the voltage at a given time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This pure virtual function must be implemented by derived classes to return the voltage value of the generated signal at a specific time. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time (in seconds) at which to evaluate the signal. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The voltage value at the given time. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/generator.h" line="22" column="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classIGenerator_1ad21deed1fd4722b2869265238a5fecdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual IGenerator::~IGenerator</definition>
+        <argsstring>()=default</argsstring>
+        <name>~IGenerator</name>
+        <briefdescription>
+<para>Default virtual destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The destructor is marked virtual to ensure proper cleanup of derived classes. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/generator.h" line="29" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An interface for signal generators. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This interface defines the common behavior for all signal generator classes. Any class implementing this interface must provide the <computeroutput>calculateVoltage</computeroutput> method. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>SquareWaveGenerator</label>
+        <link refid="classSquareWaveGenerator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>SinusoidalGenerator</label>
+        <link refid="classSinusoidalGenerator"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>IGenerator</label>
+        <link refid="classIGenerator"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/generator.h" line="11" column="1" bodyfile="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/generator.h" bodystart="12" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classIGenerator_1a6e21c100370c01bcd97a277b49c7aa21" prot="public" virt="pure-virtual"><scope>IGenerator</scope><name>calculateVoltage</name></member>
+      <member refid="classIGenerator_1ad21deed1fd4722b2869265238a5fecdf" prot="public" virt="virtual"><scope>IGenerator</scope><name>~IGenerator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

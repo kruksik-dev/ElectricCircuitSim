@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="classCircuitRL" kind="class"><name>CircuitRL</name>
+    <member refid="classCircuitRL_1a7ed6ec1a10d7cf89035f3f754afc894b" kind="variable"><name>resistance</name></member>
+    <member refid="classCircuitRL_1a81f0d5a7e7d146fa1713506d17ff5aae" kind="variable"><name>inductance</name></member>
+    <member refid="classCircuitRL_1a2fabb72570cd8975825756ac470b7c16" kind="variable"><name>current</name></member>
+    <member refid="classCircuitRL_1a9157da1ac4793726728dbbf57cc49af3" kind="function"><name>CircuitRL</name></member>
+    <member refid="classCircuitRL_1ad9ab7b178baa7f542722eae7f2162d93" kind="function"><name>simulate</name></member>
+    <member refid="classCircuitRL_1ae0e1fbcfc9708e11944bf8906c71b90e" kind="function"><name>~CircuitRL</name></member>
+  </compound>
+  <compound refid="classICircuit" kind="class"><name>ICircuit</name>
+    <member refid="classICircuit_1ab46b4b021235f5f456145e84dfbfa1aa" kind="function"><name>simulate</name></member>
+    <member refid="classICircuit_1a4de3cde9e59ba42c295f2547d3b711fa" kind="function"><name>~ICircuit</name></member>
+  </compound>
+  <compound refid="classIGenerator" kind="class"><name>IGenerator</name>
+    <member refid="classIGenerator_1a6e21c100370c01bcd97a277b49c7aa21" kind="function"><name>calculateVoltage</name></member>
+    <member refid="classIGenerator_1ad21deed1fd4722b2869265238a5fecdf" kind="function"><name>~IGenerator</name></member>
+  </compound>
+  <compound refid="classSinusoidalGenerator" kind="class"><name>SinusoidalGenerator</name>
+    <member refid="classSinusoidalGenerator_1a9ddb2692fdef19214f89dc46d90c3cc8" kind="variable"><name>amplitude</name></member>
+    <member refid="classSinusoidalGenerator_1a8e1733274a54623757fcfdb1adb0269b" kind="variable"><name>frequency</name></member>
+    <member refid="classSinusoidalGenerator_1ae1e37bec42cae5ab46b0b01a9d94807d" kind="variable"><name>phase</name></member>
+    <member refid="classSinusoidalGenerator_1aedfdcb376368493e66cc32472f97a8db" kind="function"><name>SinusoidalGenerator</name></member>
+    <member refid="classSinusoidalGenerator_1a312df7b18efe521e0edb902fd79e5a1a" kind="function"><name>calculateVoltage</name></member>
+    <member refid="classSinusoidalGenerator_1a24a713f3af064b207376e3e951b39af6" kind="function"><name>~SinusoidalGenerator</name></member>
+  </compound>
+  <compound refid="classSquareWaveGenerator" kind="class"><name>SquareWaveGenerator</name>
+    <member refid="classSquareWaveGenerator_1aa841edd205ef0b7a35233a1823b12c08" kind="variable"><name>amplitude</name></member>
+    <member refid="classSquareWaveGenerator_1a9f824da5225a79c42d77e5f961f13750" kind="variable"><name>frequency</name></member>
+    <member refid="classSquareWaveGenerator_1a1774eec0228b65d46a95f4c9d00abaef" kind="function"><name>SquareWaveGenerator</name></member>
+    <member refid="classSquareWaveGenerator_1afbb3f3478d1082a945ca02bd201823b2" kind="function"><name>calculateVoltage</name></member>
+    <member refid="classSquareWaveGenerator_1a9c3658b7ecde10e43411e121e7d26e1d" kind="function"><name>~SquareWaveGenerator</name></member>
+  </compound>
+  <compound refid="circuit_8h" kind="file"><name>circuit.h</name>
+  </compound>
+  <compound refid="circuit__rl_8h" kind="file"><name>circuit_rl.h</name>
+  </compound>
+  <compound refid="generator_8h" kind="file"><name>generator.h</name>
+  </compound>
+  <compound refid="sinusoidal__generator_8h" kind="file"><name>sinusoidal_generator.h</name>
+  </compound>
+  <compound refid="square__wave__generator_8h" kind="file"><name>square_wave_generator.h</name>
+  </compound>
+  <compound refid="dir_dfdbda394c3f7a3aa55229f33a559c41" kind="dir"><name>cpp</name>
+  </compound>
+  <compound refid="dir_e6fb451ec9c24a28c75d00abc51f4b3c" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>

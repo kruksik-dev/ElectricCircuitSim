@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="circuit__rl_8h" kind="file" language="C++">
+    <compoundname>circuit_rl.h</compoundname>
+    <includes refid="circuit_8h" local="yes">circuit.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>circuit.h</label>
+        <link refid="circuit_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>tuple</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>circuit_rl.h</label>
+        <link refid="circuit__rl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>generator.h</label>
+        <link refid="generator_8h"/>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classCircuitRL" prot="public">CircuitRL</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CIRCUIT_RL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CIRCUIT_RL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="circuit_8h" kindref="compound">circuit.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classCircuitRL" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCircuitRL" kindref="compound">CircuitRL</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classICircuit" kindref="compound">ICircuit</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>resistance;<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>inductance;<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>current;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28" refid="classCircuitRL_1a9157da1ac4793726728dbbf57cc49af3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classCircuitRL_1a9157da1ac4793726728dbbf57cc49af3" kindref="member">CircuitRL</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>resistance,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>inductance,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>current<sp/>=<sp/>0.0);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classCircuitRL_1ad9ab7b178baa7f542722eae7f2162d93" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::tuple&lt;double,<sp/>double,<sp/>double&gt;&gt;<sp/><ref refid="classCircuitRL_1ad9ab7b178baa7f542722eae7f2162d93" kindref="member">simulate</ref>(</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classIGenerator" kindref="compound">IGenerator</ref><sp/>&amp;generator,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>t_end,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="classCircuitRL_1ae0e1fbcfc9708e11944bf8906c71b90e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classCircuitRL_1ae0e1fbcfc9708e11944bf8906c71b90e" kindref="member">~CircuitRL</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>CIRCUIT_RL_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/kruksik/own_projects/ElectricCircuitSim/src/cpp/include/circuit_rl.h"/>
+  </compounddef>
+</doxygen>
