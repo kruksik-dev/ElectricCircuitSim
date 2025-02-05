@@ -1,4 +1,4 @@
-#include "../include/sinusoidal_generator.h"
+#include "sinusoidal_generator.h"
 #include <cmath>
 
 SinusoidalGenerator::SinusoidalGenerator(double amplitude, double frequency, double phase)

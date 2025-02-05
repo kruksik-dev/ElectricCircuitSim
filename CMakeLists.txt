@@ -20,12 +20,16 @@ set(SOURCES
 
 # Utworzenie biblioteki statycznej
 add_library(electric STATIC ${SOURCES})
+
 set_target_properties(electric PROPERTIES POSITION_INDEPENDENT_CODE ON)
 
 # Tworzenie modułu Pythona
 pybind11_add_module(_electric_sim MODULE src/cpp/src/pybind_module.cpp WITH_SOABI)
 target_link_libraries(_electric_sim PRIVATE pybind11::headers)
 target_link_libraries(_electric_sim PRIVATE electric)
+
+target_include_directories(electric PUBLIC src/cpp/include)
+target_include_directories(_electric_sim PRIVATE src/cpp/include)
 
 # Opcjonalnie: Definicje kompilacji, jeśli potrzebne
 target_compile_definitions(_electric_sim PRIVATE VERSION_INFO=${EXAMPLE_VERSION_INFO})

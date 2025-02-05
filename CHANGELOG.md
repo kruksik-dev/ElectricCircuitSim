@@ -2,8 +2,27 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.2]
+### Added
+- Added unit tests in Python and C++
+- Added and configured CICD and documentations
+- Added docstrings to code base
+- Added docs dir
 
-## [0.1.0]
+
+### Fixed
+- CMakelists has been fixed
+
+### Changed
+- Name of package
+- Restrucuted the project
+
+
+### Removed
+- N/A
+
+
+## [0.0.1]
 ### Added
 - Initial release of Electric Circuit Simulator.
 - Implemented Sinusoidal Generator.
