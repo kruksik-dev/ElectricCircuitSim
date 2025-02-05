@@ -2,9 +2,9 @@
 #include <pybind11/stl.h>
 #include <pybind11/functional.h>
 #include <pybind11/chrono.h>
-#include "../include/sinusoidal_generator.h"
-#include "../include/square_wave_generator.h"
-#include "../include/circuit_rl.h"
+#include "sinusoidal_generator.h"
+#include "square_wave_generator.h"
+#include "circuit_rl.h"
 
 namespace py = pybind11;
 
